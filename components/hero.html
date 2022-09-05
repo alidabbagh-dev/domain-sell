@@ -1,0 +1,51 @@
+<section class="hero">
+  <header>
+    <nav class="navbar">
+      <input type="checkbox" id="navbar_toggler" class="navbar__toggler" />
+      <div class="flex justify-content-space-between align-items-center">
+        <img
+          class="pl-4"
+          width="150px"
+          src="images/logo.svg"
+          alt="Moshify logo"
+        />
+        <div class="icon-container navbar__toggler-image mr-1">
+          <svg class="icon icon--white">
+            <use xlink:href="images/sprite.svg#menu"></use>
+          </svg>
+        </div>
+      </div>
+
+      <ul class="navbar__items p-0 m-0">
+        <li class="navbar__item border-grey">
+          <a class="navbar__item__link" href="#">Hosting</a>
+        </li>
+        <li class="navbar__item border-grey">
+          <a class="navbar__item__link" href="#">VPS</a>
+        </li>
+        <li class="navbar__item border-grey">
+          <a class="navbar__item__link" href="#">Domain</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__item__link" href="#">Pricing</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="hero__content">
+    <div>
+      <h1 class="hero__title">Cloud Hosting For Pros</h1>
+      <p class="hero__describtion">
+        Deploy your websites in less than 60 seconds.
+      </p>
+      <button class="btn btn--lg btn--orange border-transparent fw-600">
+        get started
+      </button>
+    </div>
+    <picture>
+      <source srcset="images/banner.webp 1x, images/banner@2x.webp 2x" />
+      <source srcset="images/banner.png 1x, images/banner@2x.png 2x" />
+      <img class="hero__image" src="images/banner.png" alt="baner image" />
+    </picture>
+  </div>
+</section>
