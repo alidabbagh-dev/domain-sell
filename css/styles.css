@@ -1,5 +1,6 @@
 @import url("normalize.css");
 @import url("utilities.css");
+
 * {
     box-sizing: border-box;
 }
@@ -20,7 +21,6 @@ a {
 /* links component base classes*/
 .link-arrow {
     text-transform: uppercase;
-    text-decoration: none;
     font-size: 2rem;
 }
 
@@ -136,7 +136,6 @@ a {
 
 
 /*icon component modifiers*/
-
 .icon-container--lg {
     padding: 15px;
 }
@@ -188,9 +187,6 @@ a {
     vertical-align: middle;
 }
 
-
-
-
 /*Button component modifiers*/
 .btn--lg {
     padding: 2rem 6rem;
@@ -214,8 +210,7 @@ a {
     background-color: #05cdf0;
 }
 
-/*only btn--white has specific color for text for 
-other buttons use utility classes for text color*/
+
 .btn--white {
     background-color: #fff;
     color: #1b0760;
@@ -227,9 +222,6 @@ other buttons use utility classes for text color*/
     color: #fff;
 }
 
-
-
-
 /*button component media queries*/
 @media screen and (min-width:1024px) {
     .btn {
@@ -238,7 +230,6 @@ other buttons use utility classes for text color*/
 }
 
 /*input component*/
-
 .input {
     padding: 1.5rem;
     outline: 0;
@@ -252,9 +243,7 @@ other buttons use utility classes for text color*/
     color: #cddbd7;
 }
 
-
 /*input component modifiers*/
-
 .input--border-0 {
     border: 0;
 }
@@ -276,7 +265,7 @@ other buttons use utility classes for text color*/
 }
 
 .input-group__button {
-    padding: 2rem 2rem;
+    padding: 2rem;
 }
 
 /*input-group media queries*/
@@ -287,25 +276,23 @@ other buttons use utility classes for text color*/
 }
 
 /*input-group component modifiers*/
-
 .input-group--shadow {
     box-shadow: 0 0 30px 20px #e6ebee;
 }
 
 
 /*card component*/
-
-
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(1, minmax(240px, 500px));
+    grid-template-columns: minmax(240px, 500px);
     justify-content: center;
     padding: 2rem;
     gap: 70px 30px;
     max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 9rem;/*this margin adds at final stage when using in index.html*/
+    margin-top: 9rem;
+    /*this margin adds at final stage when using in index.html*/
 }
 
 .card {
@@ -321,7 +308,6 @@ other buttons use utility classes for text color*/
 
 /*card component elements*/
 .card__header {
-
     margin: 0;
     padding-left: 3.5rem;
     padding-top: 1rem;
@@ -337,7 +323,6 @@ other buttons use utility classes for text color*/
 
 .card__price {
     font-size: 5rem;
-
 }
 
 .card__header-description {
@@ -346,8 +331,7 @@ other buttons use utility classes for text color*/
 }
 
 .card__footer {
-    margin-top: 0;
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 2.5rem;
     border: 1px solid transparent;
 }
 
@@ -368,17 +352,18 @@ other buttons use utility classes for text color*/
 
 .card__badge--popular {
     position: absolute;
-    top:-10px;
-    right:0px;
-    width:50px;
-    height:100px;
+    top: -10px;
+    right: 0px;
+    width: 50px;
+    height: 100px;
 }
 
 
 /*cards component media queries*/
 @media screen and (min-width:768px) {
     .cards-container {
-        margin-top: 15rem;/*this margin adds at final stage when using in index.html*/
+        margin-top: 15rem;
+        /*this margin adds at final stage when using in index.html*/
     }
 }
 
@@ -400,7 +385,7 @@ other buttons use utility classes for text color*/
         font-size: 1.7rem;
     }
 
-    /*we just use this modifier in large screens*/
+    /*we just use this modifier in large screens and for popular cards*/
     .card--scale-larger {
         transform: scale(1.05);
     }
@@ -426,7 +411,6 @@ other buttons use utility classes for text color*/
 .media__description {
     font-size: 2rem;
     margin-top: 0;
-    margin-bottom: 2rem;
 }
 
 
@@ -448,7 +432,6 @@ other buttons use utility classes for text color*/
 
     .media__description {
         font-size: 1.8rem;
-        margin-bottom: 1.8rem;
     }
 }
 
@@ -496,9 +479,6 @@ other buttons use utility classes for text color*/
         margin-left: 5rem;
         margin-top: 5rem;
     }
-
-
-
 }
 
 
@@ -517,8 +497,6 @@ other buttons use utility classes for text color*/
 .testimonial {
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: center;
-    justify-content: center;
     border-radius: 10px;
     margin: auto;
     padding: 2rem;
@@ -529,16 +507,15 @@ other buttons use utility classes for text color*/
 
 .testimonial__image-container {
     padding: 3rem;
+    margin-bottom: 1rem;
     position: relative;
-    width: 100%;
+    justify-self: stretch;
+    max-width: 660px;
 }
 
 
 .testimonial__image {
     width: 100%;
-    max-width: 600px;
-    margin-bottom: 1rem;
-    object-fit: cover;
 }
 
 .testimonial__icon-container {
@@ -577,8 +554,10 @@ other buttons use utility classes for text color*/
 */
 
 .callout-container {
-    position: relative;/*this property added at final stage when using in index.html*/
-    top:5rem;/*this property added at final stage when using in index.html*/
+    position: relative;
+    /*this property added at final stage when using in index.html*/
+    top: 5rem;
+    /*this property added at final stage when using in index.html*/
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -586,10 +565,11 @@ other buttons use utility classes for text color*/
     text-align: center;
     max-width: 1140px;
     min-width: 240px;
-    padding: 4rem;
+    padding: 4rem 4rem 8rem 4rem;
     margin-left: auto;
-    margin-right:auto;
-    margin-top: 5rem;/*this property added at final stage when using in index.html*/
+    margin-right: auto;
+    margin-top: 5rem;
+    /*this property added at final stage when using in index.html*/
     border-radius: 5px;
 }
 
@@ -610,10 +590,7 @@ other buttons use utility classes for text color*/
     margin-top: 0;
 }
 
-.callout__button {
-    margin-bottom: 4rem;
-    margin-top: 0;
-}
+
 
 /*Callout component modifiers*/
 .callout-container--blue-primary {
@@ -623,6 +600,7 @@ other buttons use utility classes for text color*/
 /*callout component media queries*/
 @media screen and (min-width:1024px) {
 
+    /*we just use callout__button for large screens*/
     .callout__button {
         justify-self: center;
     }
@@ -638,11 +616,10 @@ other buttons use utility classes for text color*/
         justify-items: start;
         align-items: center;
         text-align: left;
+        padding-bottom: 4rem;
     }
 
-    .callout__button {
-        margin-bottom: 0;
-    }
+
 }
 
 /*collapsible component*/
@@ -898,7 +875,8 @@ other buttons use utility classes for text color*/
 .domain-block {
     text-align: center;
     max-width: 1140px;
-    margin-top: 6rem;/*this property added at final stage when using in index.html*/
+    margin-top: 6rem;
+    /*this property added at final stage when using in index.html*/
     margin-left: auto;
     margin-right: auto;
     padding-left: 2rem;
@@ -960,7 +938,8 @@ other buttons use utility classes for text color*/
 /*feature component*/
 .feature-container {
     padding: 2rem;
-    margin-top: 5rem;/*this property added at final stage when using in index.html*/
+    margin-top: 5rem;
+    /*this property added at final stage when using in index.html*/
 }
 
 .feature-container__title {
@@ -1035,7 +1014,8 @@ other buttons use utility classes for text color*/
 @media screen and (min-width:1024px) {
 
     .feature-container {
-        margin-top: 4.5rem;/*this property added at final stage when using in index.html*/
+        margin-top: 4.5rem;
+        /*this property added at final stage when using in index.html*/
     }
 
     .feature-container__describtion {
@@ -1056,7 +1036,8 @@ other buttons use utility classes for text color*/
 .showcase-container {
     background-color: #000;
     padding: 5rem 2rem 9rem;
-    margin-top: 2rem;/*this property added at final stage when using in index.html*/
+    margin-top: 2rem;
+    /*this property added at final stage when using in index.html*/
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
 }
 
@@ -1169,7 +1150,8 @@ other buttons use utility classes for text color*/
 
 /*testimonial block component*/
 .testimonial-block {
-    margin-top: 8rem;/*this property added at final stage when using in index.html*/
+    margin-top: 8rem;
+    /*this property added at final stage when using in index.html*/
 }
 
 .testimonial-block__header {
