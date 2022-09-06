@@ -232,11 +232,14 @@ a {
 /*input component*/
 .input {
     padding: 1.5rem;
-    outline: 0;
     border: 1px solid #ccc;
     border-radius: 30px;
     font-size: 2rem;
     color: #1b0760;
+}
+
+.input:focus {
+    outline: 0;
 }
 
 ::placeholder {
@@ -353,7 +356,7 @@ a {
 .card__badge--popular {
     position: absolute;
     top: -10px;
-    right: 0px;
+    right: 0;
     width: 50px;
     height: 100px;
 }
@@ -724,7 +727,10 @@ a {
 .navbar {
     border-bottom: 1px solid rgba(204, 204, 204, 0.309);
     padding: 1rem 0;
+}
 
+.navbar__logo-image {
+    width: 150px;
 }
 
 
@@ -751,21 +757,28 @@ a {
     color: #fff;
 }
 
+/*we use this class for input checkbox*/
 .navbar__toggler {
     position: absolute;
     width: 100%;
     opacity: 0;
     margin-top: 1rem;
+    /*this margin equals to navbar top padding*/
 }
 
 .navbar__toggler-image {
     cursor: pointer;
+    opacity: 0.8;
 }
 
 .navbar__toggler:checked~.navbar__items {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
+}
+
+.navbar__toggler:checked~.flex .navbar__toggler-image {
+    opacity: 1;
 }
 
 /*navbar component modifiers*/
@@ -782,7 +795,6 @@ a {
     .navbar {
         display: flex;
         justify-content: space-between;
-
     }
 
     .navbar__items {
@@ -817,10 +829,7 @@ a {
     grid-template-columns: 1fr;
     justify-items: center;
     max-width: 1140px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 9rem;
-    padding-top: 5rem;
+    padding: 5rem 2rem 9rem;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -864,6 +873,7 @@ a {
 @media screen and (min-width:1024px) {
     .hero__content {
         padding-right: 0;
+        /*we do this to display title better in large screens*/
     }
 
     .hero__title {
@@ -945,7 +955,6 @@ a {
 .feature-container__title {
     font-size: 4rem;
     color: #1b0760;
-    text-align: center;
     margin-bottom: 1rem;
 }
 
@@ -953,9 +962,12 @@ a {
     font-size: 2rem;
     line-height: 1.5;
     color: #918ca4;
-    text-align: center;
     margin-top: 0;
     margin-bottom: 6rem;
+}
+
+.feature-container__title, .feature-container__describtion {
+    text-align: center;
 }
 
 
@@ -1067,7 +1079,7 @@ a {
 }
 
 .showcase__media {
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
 }
 
 /*showcase component media queries*/
@@ -1092,7 +1104,6 @@ a {
 }
 
 .footer__logo {
-    font-size: 2rem;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
@@ -1134,7 +1145,6 @@ a {
 
     .footer__logo {
         margin: 0;
-        padding-top: 0.25rem;
         max-width: 200px;
         order: -1;
     }
