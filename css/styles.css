@@ -1,6 +1,15 @@
 @import url("normalize.css");
 @import url("utilities.css");
 
+:root {
+    --color-black: #000;
+    --color-orange: #ff3400;
+    --color-dark-blue: #1b0760;
+    --color-blue-primary: #2584ff;
+    --color-white: #fff;
+    --color-grey: #918ca4;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -36,7 +45,7 @@ a {
 
 /*links component modifiers*/
 .link-arrow--orange {
-    color: #ff3400;
+    color: var(--color-orange);
 }
 
 /*links component media queries*/
@@ -59,17 +68,17 @@ a {
 /* badges modifiers */
 .badge--blue-secondary {
     background-color: #02cdf1;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .badge--blue-primary {
     background-color: #126de4;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .badge--light-blue {
     background-color: #02cdf1;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .badge--sm {
@@ -157,7 +166,7 @@ a {
 
 
 .icon--blue-primary {
-    fill: #2584ff;
+    fill: var(--color-blue-primary);
     /*svg color*/
 }
 
@@ -167,11 +176,11 @@ a {
 }
 
 .icon--bg-orange {
-    background-color: #ff3400;
+    background-color: var(--color-orange);
 }
 
 .icon--white {
-    fill: #fff;
+    fill: var(--color-white);
 }
 
 /* button component */
@@ -193,8 +202,8 @@ a {
 }
 
 .btn--orange {
-    background-color: #ff3400;
-    color: #fff;
+    background-color: var(--color-orange);
+    color: var(--color-white);
 }
 
 .btn--orange:hover {
@@ -203,7 +212,7 @@ a {
 
 .btn--blue-secondary {
     background-color: #00d9ff;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .btn--blue-secondary:hover {
@@ -212,14 +221,14 @@ a {
 
 
 .btn--white {
-    background-color: #fff;
-    color: #1b0760;
-    border: 2px solid #1b0760;
+    background-color: var(--color-white);
+    color: var(--color-dark-blue);
+    border: 2px solid var(--color-dark-blue);
 }
 
 .btn--white:hover {
-    background-color: #1b0760;
-    color: #fff;
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
 }
 
 /*button component media queries*/
@@ -235,7 +244,7 @@ a {
     border: 1px solid #ccc;
     border-radius: 30px;
     font-size: 2rem;
-    color: #1b0760;
+    color: var(--color-dark-blue);
 }
 
 .input:focus {
@@ -341,12 +350,12 @@ a {
 /*card component modifiers*/
 .card__header--blue-secondary {
     background-color: #00d9ff;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .card__header--blue-primary {
-    background-color: #2584ff;
-    color: #fff;
+    background-color: var(--color-blue-primary);
+    color: var(--color-white);
 }
 
 .card--popular {
@@ -421,7 +430,7 @@ a {
 /*media object component modifiers*/
 
 .media__title--white {
-    color: #fff;
+    color: var(--color-white);
 }
 
 .media__description--gray {
@@ -455,13 +464,13 @@ a {
 .quote__author-name {
     font-size: 2rem;
     font-weight: 500;
-    color: #1b0760;
+    color: var(--color-dark-blue);
     margin-bottom: 0;
     margin-top: 0;
 }
 
 .quote__company-name {
-    color: #1b0760;
+    color: var(--color-dark-blue);
     opacity: 0.4;
     font-size: 1.5rem;
 }
@@ -597,7 +606,7 @@ a {
 
 /*Callout component modifiers*/
 .callout-container--blue-primary {
-    background-color: #2584ff;
+    background-color: var(--color-blue-primary);
 }
 
 /*callout component media queries*/
@@ -632,7 +641,7 @@ a {
 
 .collapsible__title {
     display: block;
-    color: #fff;
+    color: var(--color-white);
     font-size: 2.5rem;
     text-transform: uppercase;
     padding-left: 2rem;
@@ -678,7 +687,7 @@ a {
 }
 
 .collapsible__item__link:hover {
-    color: #fff;
+    color: var(--color-white);
 }
 
 
@@ -699,8 +708,8 @@ a {
 
 /*collapsible component modifiers*/
 .collapsible__arrow--bg-black {
-    color: #fff;
-    background-color: #000;
+    color: var(--color-white);
+    background-color: var(--color-black);
 }
 
 
@@ -760,7 +769,7 @@ a {
 }
 
 .navbar__item__link:hover {
-    color: #fff;
+    color: var(--color-white);
 }
 
 
@@ -772,7 +781,7 @@ a {
 
 /*navbar component modifiers*/
 .navbar--bg-black {
-    background-color: #000;
+    background-color: var(--color-black);
 }
 
 
@@ -803,7 +812,7 @@ a {
 
 /*Hero component*/
 .hero {
-    background-color: #000;
+    background-color: var(--color-black);
     clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 
@@ -822,7 +831,7 @@ a {
 
 .hero__title {
     font-size: 6rem;
-    color: #fff;
+    color: var(--color-white);
     margin-top: 0;
     margin-bottom: 3rem;
 }
@@ -878,7 +887,7 @@ a {
 
 .domain-block__title {
     font-size: 4rem;
-    color: #1b0760;
+    color: var(--color-dark-blue);
     margin-bottom: 0;
 }
 
@@ -886,7 +895,7 @@ a {
     font-size: 2rem;
     line-height: 1.5;
     word-spacing: 1px;
-    color: #918ca4;
+    color: var(--color-grey);
     margin-top: 1rem;
     margin-bottom: 4rem;
 }
@@ -911,7 +920,7 @@ a {
 
 .domain-block__list-item {
     font-size: 2rem;
-    color: #1b0760;
+    color: var(--color-dark-blue);
     white-space: nowrap;
 }
 
@@ -937,14 +946,14 @@ a {
 
 .feature-container__title {
     font-size: 4rem;
-    color: #1b0760;
+    color: var(--color-dark-blue);
     margin-bottom: 1rem;
 }
 
 .feature-container__describtion {
     font-size: 2rem;
     line-height: 1.5;
-    color: #918ca4;
+    color: var(--color-grey);
     margin-top: 0;
     margin-bottom: 6rem;
 }
@@ -968,7 +977,7 @@ a {
 
 .feature__title {
     font-size: 2.8rem;
-    color: #1b0760;
+    color: var(--color-dark-blue);
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -976,7 +985,7 @@ a {
 .feature__describtion {
     font-size: 2rem;
     line-height: 1.5;
-    color: #918ca4;
+    color: var(--color-grey);
     margin-top: 0;
 }
 
@@ -1029,7 +1038,7 @@ a {
 
 /*showcase component*/
 .showcase-container {
-    background-color: #000;
+    background-color: var(--color-black);
     padding: 5rem 2rem 9rem;
     margin-top: 2rem;
     /*this property added at final stage when using in index.html*/
@@ -1048,7 +1057,7 @@ a {
 
 .showcase__title {
     font-size: 4rem;
-    color: #fff;
+    color: var(--color-white);
     text-align: center;
 }
 
@@ -1103,7 +1112,7 @@ a {
     text-align: center;
     letter-spacing: 1px;
     line-height: 1.5;
-    color: #fff;
+    color: var(--color-white);
     opacity: 0.3;
     margin-top: 0;
 }
@@ -1156,13 +1165,13 @@ a {
 
 .testimonial-block__title {
     font-size: 4rem;
-    color: #1b0760;
+    color: var(--color-dark-blue);
     margin-bottom: 1rem;
 }
 
 .testimonial-block__describtion {
     font-size: 2rem;
-    color: #918ca4;
+    color: var(--color-grey);
     line-height: 1.5;
     margin-top: 0;
 }
