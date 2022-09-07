@@ -659,7 +659,6 @@ a {
 
 
 
-
 .collapsible__items {
     max-height: 0;
     opacity: 0;
@@ -742,6 +741,13 @@ a {
     font-size: 2rem;
 }
 
+/*we toggle this class in js code and we don't use it in html */
+.navbar__items--collapsed {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
 .navbar__item {
     padding-left: 3.5rem;
     padding-bottom: 1rem;
@@ -757,28 +763,11 @@ a {
     color: #fff;
 }
 
-/*we use this class for input checkbox*/
-.navbar__toggler {
-    position: absolute;
-    width: 100%;
-    opacity: 0;
-    margin-top: 1.5rem;
-    /*this margin equals to navbar top padding*/
-}
+
 
 .navbar__toggler-image {
     cursor: pointer;
     opacity: 0.8;
-}
-
-.navbar__toggler:checked~.navbar__items {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-}
-
-.navbar__toggler:checked~.flex .navbar__toggler-image {
-    opacity: 1;
 }
 
 /*navbar component modifiers*/
@@ -807,15 +796,9 @@ a {
         border-bottom: none;
     }
 
-    .navbar__toggler-image, .navbar__toggler {
+    .navbar__toggler-image {
         display: none;
     }
-
-    .navbar__toggler:checked~.navbar__items {
-        max-height: 100vh;
-        opacity: 1;
-    }
-
 }
 
 /*Hero component*/
