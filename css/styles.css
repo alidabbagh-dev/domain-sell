@@ -750,12 +750,7 @@ a {
     font-size: 2rem;
 }
 
-/*we toggle this class in js code and we don't use it in html */
-.navbar__items--collapsed {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-}
+
 
 .navbar__item {
     padding-left: 3.5rem;
@@ -788,6 +783,17 @@ a {
 
 
 /*navbar component media queries*/
+
+@media screen and (max-width:767px) {
+
+    /*we toggle this class in js code and we don't use it in html */
+    .navbar__items--collapsed {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+}
+
 @media screen and (min-width:768px) {
 
     .navbar {
