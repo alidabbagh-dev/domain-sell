@@ -21,11 +21,55 @@ html {
 body {
     font-family: "Inter", Arial, Helvetica, sans-serif;
     height: 100vh;
+    line-height: 1.5;
 }
 
 a {
     text-decoration: none;
 }
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+@media screen and (min-width:768px) {
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+    }
+}
+
+
 
 /* links component base classes*/
 .link-arrow {
@@ -414,21 +458,18 @@ a {
 }
 
 .media__title {
-    font-size: 2.8rem;
     font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 .media__description {
-    font-size: 2rem;
     margin-top: 0;
 }
 
 
 
 /*media object component modifiers*/
-
 .media__title--white {
     color: var(--color-white);
 }
@@ -437,15 +478,6 @@ a {
     color: #7b858b;
 }
 
-@media screen and (min-width:1024px) {
-    .media__title {
-        font-size: 2.4rem;
-    }
-
-    .media__description {
-        font-size: 1.8rem;
-    }
-}
 
 /*quote component
  a component for a text that has double quotations and author name and company name*/
@@ -598,7 +630,6 @@ a {
 }
 
 .callout__description {
-    font-size: 2rem;
     margin-top: 0;
 }
 
@@ -615,10 +646,6 @@ a {
     /*we just use callout__button for large screens*/
     .callout__button {
         justify-self: center;
-    }
-
-    .callout__description {
-        font-size: 1.8rem;
     }
 }
 
@@ -783,7 +810,6 @@ a {
 
 
 /*navbar component media queries*/
-
 @media screen and (max-width:767px) {
 
     /*we toggle this class in js code and we don't use it in html */
@@ -836,7 +862,6 @@ a {
 
 
 .hero__title {
-    font-size: 6rem;
     color: var(--color-white);
     margin-top: 0;
     margin-bottom: 3rem;
@@ -847,7 +872,6 @@ a {
     color: #b9c3cf;
     margin-top: 0;
     margin-bottom: 5rem;
-    line-height: 1.5;
     letter-spacing: 1px;
 }
 
@@ -873,10 +897,6 @@ a {
         padding-right: 0;
         /*we do this to display title better in large screens*/
     }
-
-    .hero__title {
-        font-size: 8rem;
-    }
 }
 
 /*domain block component*/
@@ -898,8 +918,6 @@ a {
 }
 
 .domain-block__describtion {
-    font-size: 2rem;
-    line-height: 1.5;
     word-spacing: 1px;
     color: var(--color-grey);
     margin-top: 1rem;
@@ -935,11 +953,6 @@ a {
     .domain-block__list {
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
-
-    .domain-block__describtion {
-        font-size: 1.8rem;
-    }
-
 }
 
 
@@ -957,8 +970,6 @@ a {
 }
 
 .feature-container__describtion {
-    font-size: 2rem;
-    line-height: 1.5;
     color: var(--color-grey);
     margin-top: 0;
     margin-bottom: 6rem;
@@ -982,15 +993,12 @@ a {
 
 
 .feature__title {
-    font-size: 2.8rem;
     color: var(--color-dark-blue);
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 .feature__describtion {
-    font-size: 2rem;
-    line-height: 1.5;
     color: var(--color-grey);
     margin-top: 0;
 }
@@ -1028,17 +1036,7 @@ a {
         /*this property added at final stage when using in index.html*/
     }
 
-    .feature-container__describtion {
-        font-size: 1.8rem;
-    }
 
-    .feature__title {
-        font-size: 2.4rem;
-    }
-
-    .feature__describtion {
-        font-size: 1.8rem;
-    }
 }
 
 
@@ -1117,7 +1115,6 @@ a {
     font-size: 2.1rem;
     text-align: center;
     letter-spacing: 1px;
-    line-height: 1.5;
     color: var(--color-white);
     opacity: 0.3;
     margin-top: 0;
@@ -1176,15 +1173,6 @@ a {
 }
 
 .testimonial-block__describtion {
-    font-size: 2rem;
     color: var(--color-grey);
-    line-height: 1.5;
     margin-top: 0;
-}
-
-/*testimonial block component media queries*/
-@media screen and (min-width:1024px) {
-    .testimonial-block__describtion {
-        font-size: 1.8rem;
-    }
 }
